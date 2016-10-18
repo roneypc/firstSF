@@ -1,0 +1,7 @@
+alimentos:
+    resource: "@AlimentosBundle/Resources/config/routing.yml"
+    prefix:   /alimentos
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

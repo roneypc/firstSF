@@ -1,0 +1,15 @@
+<table class="w3-table-all w3-hoverable">
+    <tr class="w3-red">
+        <th>alimento (por 100g)</th>
+        <th>energía (Kcal)</th>
+        <th>grasa (g)</th>
+    </tr>
+    {% for alimento in alimentos %}
+    <tr class="w3-hover-blue">
+        <td><a href="{{ path('JAMAB_ver', {'id': alimento.id}) }}">{{alimento.nombre}}</a></td>
+        <td>{{alimento.energia }}</td>
+        <td>{{alimento.grasatotal }}</td>
+    </tr>
+    {% endfor %}
+
+</table>

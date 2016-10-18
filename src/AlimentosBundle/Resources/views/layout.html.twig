@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+{% endblock %}
+
+{% block body %}
+<div class="w3-container w3-blue" id="cabecera">
+  <h1 class="w3-text-shadow">Información de alimentos</h1>
+</div>
+
+<div id="menu">
+<hr/>
+	<ul class="w3-navbar w3-card-8 w3-light-grey"">
+		<li><a href="{{ path('JAMAB_homepage')}}">inicio</a></li>
+		<li><a href="{{ path('JAMAB_listar')}}">ver alimentos</a></li>
+		<li><a href="{{ path('JAMAB_insertar')}}">insertar alimento</a></li>
+		<li><a href="{{ path('JAMAB_buscar')}}">buscar por nombre</a></li>
+		<li><a href="">buscar por energia</a></li>
+		<li><a href="">búsqueda combinada</a></li>
+	</ul>  
+<hr/>
+</div>
+
+<div id="contenido">
+{% block contenido %}
+
+{% endblock %}
+</div>
+
+<div id="pie">
+<hr/>
+<div align="center">- pie de página -</div>
+</div>
+
+{% endblock %}
