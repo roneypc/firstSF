@@ -64,7 +64,7 @@ class DefaultController extends Controller {
 		// comprobar campos formulario
 		if ($m->insertarAlimento($_POST['nombre'], $_POST['energia'], $_POST['proteina'], $_POST['hc'], $_POST['fibra'], $_POST['grasa'])) {
 			$params['mensaje'] = 'Alimento insertado correctamente';
-			$params['alimento'] = $m->dameAlimento($m->getLastInsertedID());
+			$params['alimento'] = $m->dameUltimoAlimentoInsertado();
 		} else {
 			$params = array(
 			'nombre' => $_POST['nombre'],

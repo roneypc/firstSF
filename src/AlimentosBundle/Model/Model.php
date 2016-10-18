@@ -8,10 +8,6 @@ class Model {
 
     private $lastInsertedID;
 
-    public function getLastInsertedID() {
-        return $this->lastInsertedID;
-    }
-
     public function __construct($dbname,$dbuser,$dbpass,$dbhost) {
         $mvc_bd_conexion = mysqli_connect($dbhost, $dbuser,$dbpass,$dbname);
         if (!$mvc_bd_conexion) {
@@ -47,7 +43,7 @@ class Model {
     }
 
     public function dameUltimoAlimentoInsertado() {
-
+        return $this->dameAlimento($this->lastInsertedID);
     }
 
     public function insertarAlimento($n, $e, $p, $hc, $f, $g) {
